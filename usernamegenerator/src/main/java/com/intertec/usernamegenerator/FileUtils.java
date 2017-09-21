@@ -13,7 +13,7 @@ public class FileUtils {
 	public static List<String> readLines(String fileName) {
 
 		List<String> list = new ArrayList<>();
-		//read file into stream, try-with-resources
+		//read file into stream
 		try (Stream<String> stream = Files.lines(Paths.get(fileName))) {
 
 			list = stream.collect(Collectors.toList());
